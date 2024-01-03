@@ -1,0 +1,17 @@
+%primary-btn {
+  width: 150px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: black;
+  background-color: #fff;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.6s;
+
+  &:hover{
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+}

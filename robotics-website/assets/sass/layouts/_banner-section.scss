@@ -1,0 +1,53 @@
+#banner {
+  padding: 2.5rem 0;
+  .hero-banner-section {
+    @include flexbox;
+    .hero-banner-section-left {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h1 {
+        font-size: 60px;
+        color: #fff;
+        font-weight: 300;
+      }
+      h5 {
+        font-size: 14px;
+        font-weight: 200;
+        letter-spacing: 1.4px;
+        color: #fff;
+      }
+      button {
+        @extend %primary-btn;
+      }
+    }
+    .hero-banner-section-right {
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .hero-banner-section {
+      flex-direction: column;
+    }
+  }
+  @media (min-width: 481px) and (max-width: 767px) {
+    .hero-banner-section {
+      flex-direction: column;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 480px) {
+    .hero-banner-section {
+      flex-direction: column;
+      .hero-banner-section-left{
+        h1{
+            font-size: 30px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+#home-about {
+  padding: 2rem 0;
+  .home-about {
+    @include flexbox;
+    gap: 30px;
+    .home-aout-left {
+      width: 50%;
+    //   margin-left: 30px;
+      .texts {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        h3 {
+          font-size: 36px;
+          color: #222222;
+          font-weight: 600;
+        }
+        h6 {
+          font-size: 16px;
+          color: #222222;
+          font-weight: 300;
+        }
+        p {
+          font-size: 14px;
+          color: #777777;
+        }
+        button {
+          @extend %primary-btn;
+          background: rgb(206, 148, 233);
+          background: radial-gradient(
+            circle,
+            rgba(206, 148, 233, 1) 40%,
+            rgba(238, 174, 202, 1) 100%
+          );
+        }
+      }
+    }
+    .home-about-right {
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .home-about {
+      flex-direction: column;
+    }
+  }
+  @media (min-width: 481px) and (max-width: 767px) {
+    .home-about {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 480px) {
+    .home-about {
+      flex-direction: column;
+      align-items: start;
+      .home-about-right {
+        width: 100%;
+      }
+      .home-aout-left {
+        width: 100%;
+        .texts{
+            width: 200px;
+        }
+      }
+    }
+  }
+}
