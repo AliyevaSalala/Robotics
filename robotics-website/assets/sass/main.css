@@ -7,6 +7,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -17,7 +21,7 @@
   }
 }
 
-#home-about-video .about-video .about-video-left button, #home-about .home-about .home-aout-left .texts button, #products-section .products-section .load-more-btn, #products-section .products-section .products .products-card .products-card-texts .details, #banner .hero-banner-section .hero-banner-section-left button {
+#home-about-video .about-video .about-video-left button, #home-about .home-about .home-aout-left .texts button, #products-section .products-section .load-more-btn, #products-section .products-section .products .products-card .products-card-texts .details, #banner .hero-banner-section .hero-banner-section-left a {
   width: 150px;
   padding: 10px 20px;
   text-transform: uppercase;
@@ -28,7 +32,7 @@
   cursor: pointer;
   transition: all 0.6s;
 }
-#home-about-video .about-video .about-video-left button:hover, #home-about .home-about .home-aout-left .texts button:hover, #products-section .products-section .load-more-btn:hover, #products-section .products-section .products .products-card .products-card-texts .details:hover, #banner .hero-banner-section .hero-banner-section-left button:hover {
+#home-about-video .about-video .about-video-left button:hover, #home-about .home-about .home-aout-left .texts button:hover, #products-section .products-section .load-more-btn:hover, #products-section .products-section .products .products-card .products-card-texts .details:hover, #banner .hero-banner-section .hero-banner-section-left a:hover {
   background-color: transparent;
   color: #fff;
   border: 1px solid #fff;
@@ -683,6 +687,7 @@
 }
 #form .form-section form input {
   padding: 5px 15px;
+  width: 300px;
   border-radius: 8px;
   border: 1px solid gray;
   outline: none;
@@ -845,4 +850,23 @@ footer .footer-bottom .icons i:hover {
     flex-direction: column;
     gap: 20px;
   }
+}
+
+.to-top {
+  padding: 10px 18px;
+  position: fixed;
+  right: 20px;
+  bottom: 16px;
+  opacity: 0;
+  background-color: #eb6767;
+  border-radius: 50%;
+  font-size: 25px;
+  transition: all 1s;
+}
+.to-top a {
+  color: #fff;
+}
+.to-top.active {
+  opacity: 1;
+  bottom: 28px;
 }/*# sourceMappingURL=main.css.map */

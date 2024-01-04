@@ -18,7 +18,7 @@
         letter-spacing: 1.4px;
         color: #fff;
       }
-      button {
+      a {
         @extend %primary-btn;
       }
     }
@@ -43,9 +43,9 @@
   @media (min-width: 320px) and (max-width: 480px) {
     .hero-banner-section {
       flex-direction: column;
-      .hero-banner-section-left{
-        h1{
-            font-size: 30px;
+      .hero-banner-section-left {
+        h1 {
+          font-size: 30px;
         }
       }
     }

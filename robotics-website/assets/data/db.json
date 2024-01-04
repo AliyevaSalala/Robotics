@@ -1,52 +1,28 @@
 {
   "products": [
     {
-      "id": 2,
-      "image": "./assets/images/p2.png",
-      "title": "The Crab Wheel",
-      "description": "Who are in extremely love with eco friendly system."
-    },
-    {
       "id": 3,
       "image": "./assets/images/p3.png",
-      "title": "The Plug Ninja",
-      "description": "Who are in extremely love with eco friendly system."
-    },
-    {
-      "id": 4,
-      "image": "./assets/images/p4.png",
-      "title": "The Controller",
-      "description": "Who are in extremely love with eco friendly system."
-    },
-    {
-      "id": 5,
-      "image": "./assets/images/p1.png",
-      "title": "The Plug Ninja",
-      "description": "Who are in extremely love with eco friendly system."
-    },
-    {
-      "id": 6,
-      "image": "./assets/images/p3.png",
-      "title": "The Plug Ninja",
-      "description": "Who are in extremely love with eco friendly system."
-    },
-    {
-      "id": 7,
-      "image": "./assets/images/p4.png",
-      "title": "The Controller",
+      "title": " shalala Ninja",
       "description": "Who are in extremely love with eco friendly system."
     },
     {
       "id": 8,
-      "image": "./assets/images/p2.png",
-      "title": "The Crab Wheel",
+      "image": "./assets/images/p4.png",
+      "title": "nazrin ",
       "description": "Who are in extremely love with eco friendly system."
     },
     {
-      "id": 9,
-      "image": "./assets/images/p1.png",
-      "title": "The Crab Wheel",
-      "description": "Who are in extremely love with eco friendly system."
+      "image": "./assets/images/p2.png",
+      "title": "shabnam",
+      "description": "aliyeva shalalalalalalala",
+      "id": 11
+    },
+    {
+      "image": "./assets/images/p2.png",
+      "title": "Sahla",
+      "description": "Sahla menim bacimdir",
+      "id": 12
     }
   ]
 }

@@ -5,6 +5,7 @@ const products = document.querySelector(".products");
 const search = document.querySelector("#search");
 const loadMoreBtn = document.querySelector(".load-more-btn");
 const sortBtn = document.querySelector(".sort-btn");
+const toTop = document.querySelector(".to-top");
 
 const BASE_URL = "http://localhost:8080/products";
 
@@ -32,8 +33,10 @@ menuIcn.addEventListener("click", function () {
 window.addEventListener("scroll", function () {
   if (window.scrollY > 0) {
     header.classList.add("header-scroll");
+    toTop.classList.add("active");
   } else {
     header.classList.remove("header-scroll");
+    toTop.classList.remove("active");
   }
 });
 

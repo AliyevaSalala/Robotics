@@ -155,7 +155,6 @@ footer {
     .footer {
       flex-direction: column;
       gap: 20px;
-      
     }
     .footer-bottom {
       flex-direction: column;
@@ -171,5 +170,25 @@ footer {
       flex-direction: column;
       gap: 20px;
     }
+  }
+}
+
+.to-top {
+  padding: 10px 18px;
+  position: fixed;
+  right: 20px;
+  bottom: 16px;
+  opacity: 0;
+  background-color: #eb6767;
+  border-radius: 50%;
+  font-size: 25px;
+  transition: all 1s;
+  a {
+    color: #fff;
+  }
+
+  &.active {
+    opacity: 1;
+    bottom: 28px;
   }
 }
