@@ -29,6 +29,14 @@ menuIcn.addEventListener("click", function () {
     : (this.classList = "fa-solid fa-bars");
 });
 
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 0) {
+    header.classList.add("header-scroll");
+  } else {
+    header.classList.remove("header-scroll");
+  }
+});
+
 function drawCards(data) {
   products.innerHTML = "";
   data.forEach((element) => {
@@ -39,9 +47,9 @@ function drawCards(data) {
     <div class="products-card-texts">
       <h4>${element.title}</h4>
       <p>${element.description}</p>
-      <a href="details.html?id=${element.id}">View Details</a>
+      <a href="details.html?id=${element.id}" class="details">View Details</a>
     <div class="icons"> 
-     <i class="fa-solid fa-pen-to-square" onclick=editBtn()></i>
+    <a href="form.html?id=${element.id}"> <i class="fa-solid fa-pen-to-square"></i></a>
     <i class="fa-solid fa-trash" onclick=deleteBtn(${element.id},this)></i>
     </div>
     </div>
@@ -90,6 +98,3 @@ async function deleteBtn(id, btn) {
     btn.closest("products-card").remove();
   }
 }
-
-
-

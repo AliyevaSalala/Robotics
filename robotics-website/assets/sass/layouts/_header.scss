@@ -7,6 +7,7 @@
     padding: 1.5rem 0;
     position: fixed;
     width: 100%;
+    z-index: 111;
     .navbar {
       @include flexbox;
       nav {
@@ -45,6 +46,10 @@
       }
     }
 
+    &.header-scroll {
+      background-color: rgba(138, 144, 255, 0.9);
+    }
+
     @media screen and (max-width: 767px) {
       .navbar {
         nav {
@@ -55,7 +60,7 @@
           width: 50%;
           background-color: rgba(0, 0, 0, 0.8);
           padding: 40px 20px;
-          overflow-y: auto;
+          // transition: all 0.5s;
           height: 100%;
           ul {
             flex-direction: column;

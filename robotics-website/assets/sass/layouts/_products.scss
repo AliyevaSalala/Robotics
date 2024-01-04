@@ -87,7 +87,7 @@
           p {
             color: #777777;
           }
-          a {
+          .details {
             @extend %primary-btn;
             width: 200px;
             &:hover {
@@ -100,6 +100,7 @@
               );
             }
           }
+
           .icons {
             display: flex;
             justify-content: center;
@@ -119,7 +120,7 @@
       }
     }
     .load-more-btn {
-        margin-top: 30px;
+      margin-top: 30px;
       @extend %primary-btn;
       border: 1px solid rgb(131, 58, 180);
       &:hover {
