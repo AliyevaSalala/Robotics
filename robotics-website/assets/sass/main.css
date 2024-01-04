@@ -42,6 +42,8 @@
 }
 .bg-img header {
   padding: 1.5rem 0;
+  position: fixed;
+  width: 100%;
 }
 .bg-img header .navbar {
   display: flex;
@@ -451,4 +453,294 @@
   #home-about-video .about-video {
     flex-direction: column;
   }
+}
+
+#features {
+  padding: 2rem 0;
+  background-image: url("../images/feature-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#features .features-section .texts {
+  text-align: center;
+  margin-bottom: 50px;
+}
+#features .features-section .texts h1 {
+  font-size: 36px;
+  color: #fff;
+  font-weight: 600;
+}
+#features .features-section .texts p {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 300;
+}
+#features .features-section .features-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+#features .features-section .features-boxes .features-box {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+#features .features-section .features-boxes .features-box a {
+  font-weight: 600;
+  font-size: 18px;
+  transition: all 0.5s;
+  color: #222;
+}
+#features .features-section .features-boxes .features-box a i {
+  margin-right: 8px;
+}
+#features .features-section .features-boxes .features-box a:hover {
+  color: #8abcf2;
+}
+#features .features-section .features-boxes .features-box p {
+  font-weight: 300;
+  font-size: 14px;
+  color: rgba(119, 119, 119, 0.4666666667);
+}
+
+#brand {
+  padding: 2rem 0;
+  margin-top: 40px;
+}
+#brand .brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+#brand .brand .brand-box {
+  width: 200px;
+}
+#brand .brand .brand-box img {
+  width: 50%;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #brand .brand {
+    flex-direction: column;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  #brand .brand {
+    flex-direction: column;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  #brand .brand {
+    flex-direction: column;
+  }
+}
+
+#blog {
+  padding: 2rem 0;
+}
+#blog .blog .blog-texts {
+  text-align: center;
+  margin: 40px 0;
+}
+#blog .blog .blog-texts h1 {
+  font-size: 36px;
+  color: #222;
+}
+#blog .blog .blog-texts p {
+  font-size: 14px;
+  color: rgba(119, 119, 119, 0.4666666667);
+}
+#blog .blog .blog-cards {
+  display: flex;
+  gap: 30px;
+}
+#blog .blog .blog-cards .blog-card {
+  width: 50%;
+  box-shadow: 5px 5px 5px #ddd;
+  overflow: hidden;
+  border-radius: 8px;
+}
+#blog .blog .blog-cards .blog-card img {
+  width: 100%;
+  transition: all 0.5s;
+}
+#blog .blog .blog-cards .blog-card .blog-bottom {
+  display: flex;
+  padding: 20px 0;
+  flex-direction: column;
+  gap: 20px;
+}
+#blog .blog .blog-cards .blog-card .blog-bottom .btn button {
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: rgb(206, 148, 233);
+  background: radial-gradient(circle, rgb(206, 106, 252) 40%, rgb(246, 129, 180) 100%);
+  cursor: pointer;
+}
+#blog .blog .blog-cards .blog-card .blog-bottom h4 {
+  font-size: 18px;
+}
+#blog .blog .blog-cards .blog-card .blog-bottom p {
+  color: rgba(89, 83, 83, 0.4666666667);
+  font-size: 14px;
+  font-weight: 300;
+}
+#blog .blog .blog-cards .blog-card .blog-bottom .year {
+  color: #222;
+}
+#blog .blog .blog-cards .blog-card:hover img {
+  transform: scale(1.1);
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #blog .blog .blog-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  #blog .blog .blog-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  #blog .blog .blog-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+footer {
+  padding: 2rem 0;
+  margin-top: 50px;
+  background-image: url("../images/footer-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+footer .footer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer .footer-products {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .footer .footer-products h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+footer .footer .footer-products nav ul li a {
+  color: #fff;
+  font-size: 14px;
+}
+footer .footer .newsletter {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .footer .newsletter h3 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+}
+footer .footer .newsletter p {
+  color: #fff;
+  font-size: 14px;
+}
+footer .footer .newsletter input {
+  width: 200px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  outline: none;
+}
+footer .footer .newsletter button {
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  background: rgb(188, 78, 238);
+  background: radial-gradient(circle, rgb(182, 76, 231) 40%, rgb(225, 111, 160) 100%);
+}
+footer .footer .newsletter button i {
+  margin-left: 8px;
+}
+footer .footer .photos {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+footer .footer .photos h3 {
+  padding: 10px 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+footer .footer .photos .boxes {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+footer .footer .photos .boxes .box {
+  position: relative;
+  width: 20%;
+}
+footer .footer .photos .boxes .box .layout {
+  width: 100%;
+  position: absolute;
+  height: 90%;
+  background-color: #eb6767;
+  opacity: 0;
+  transition: all 0.6s;
+}
+footer .footer .photos .boxes .box img {
+  width: 100%;
+}
+footer .footer .photos .boxes .box:hover .layout {
+  opacity: 0.6;
+}
+footer .footer-bottom {
+  margin-top: 40px;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-bottom p {
+  color: #fff;
+}
+footer .footer-bottom p i {
+  color: rgb(121, 121, 241);
+  cursor: pointer;
+}
+footer .footer-bottom p a {
+  color: rgb(121, 121, 241);
+}
+footer .footer-bottom .icons {
+  display: flex;
+  gap: 10px;
+}
+footer .footer-bottom .icons i {
+  padding: 10px;
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+footer .footer-bottom .icons i:hover {
+  background-color: rgb(121, 121, 241);
 }/*# sourceMappingURL=main.css.map */

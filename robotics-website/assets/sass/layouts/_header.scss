@@ -5,6 +5,8 @@
   background-size: cover;
   header {
     padding: 1.5rem 0;
+    position: fixed;
+    width: 100%;
     .navbar {
       @include flexbox;
       nav {
