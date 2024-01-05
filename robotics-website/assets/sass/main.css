@@ -21,7 +21,7 @@ html {
   }
 }
 
-#home-about-video .about-video .about-video-left button, #home-about .home-about .home-aout-left .texts button, #products-section .products-section .load-more-btn, #products-section .products-section .products .products-card .products-card-texts .details, #banner .hero-banner-section .hero-banner-section-left a {
+#favorite .favorite .boxes .products-card .products-card-texts .details, #home-about-video .about-video .about-video-left button, #home-about .home-about .home-aout-left .texts button, #products-section .products-section .load-more-btn, #products-section .products-section .products .products-card .products-card-texts .details, #banner .hero-banner-section .hero-banner-section-left a {
   width: 150px;
   padding: 10px 20px;
   text-transform: uppercase;
@@ -32,7 +32,7 @@ html {
   cursor: pointer;
   transition: all 0.6s;
 }
-#home-about-video .about-video .about-video-left button:hover, #home-about .home-about .home-aout-left .texts button:hover, #products-section .products-section .load-more-btn:hover, #products-section .products-section .products .products-card .products-card-texts .details:hover, #banner .hero-banner-section .hero-banner-section-left a:hover {
+#favorite .favorite .boxes .products-card .products-card-texts .details:hover, #home-about-video .about-video .about-video-left button:hover, #home-about .home-about .home-aout-left .texts button:hover, #products-section .products-section .load-more-btn:hover, #products-section .products-section .products .products-card .products-card-texts .details:hover, #banner .hero-banner-section .hero-banner-section-left a:hover {
   background-color: transparent;
   color: #fff;
   border: 1px solid #fff;
@@ -57,11 +57,21 @@ html {
 }
 .bg-img header .navbar nav ul {
   display: flex;
+  position: relative;
   gap: 20px;
+}
+.bg-img header .navbar nav ul li {
+  transition: all 0.5s;
+}
+.bg-img header .navbar nav ul li:hover ul.dropdown {
+  display: block;
 }
 .bg-img header .navbar nav ul li a {
   font-size: 15px;
   color: #fff;
+}
+.bg-img header .navbar nav ul li a .down {
+  font-size: 13px;
 }
 .bg-img header .navbar nav ul li a::after {
   content: "";
@@ -73,6 +83,17 @@ html {
 }
 .bg-img header .navbar nav ul li a:hover::after {
   width: 100%;
+}
+.bg-img header .navbar nav ul li .dropdown {
+  width: 30%;
+  position: absolute;
+  background-color: #fff;
+  padding: 10px;
+  line-height: 2;
+  display: none;
+}
+.bg-img header .navbar nav ul li .dropdown li a {
+  color: black;
 }
 .bg-img header .navbar .fa-solid {
   font-size: 25px;
@@ -693,6 +714,77 @@ html {
   outline: none;
   margin: 10px 0;
   box-shadow: 8px 8px 8px #ddd;
+}
+
+#favorite {
+  padding: 2rem 0;
+}
+#favorite .favorite {
+  margin-top: 100px;
+}
+#favorite .favorite .boxes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+#favorite .favorite .boxes .products-card {
+  width: 250px;
+  position: relative;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 20px;
+  border-bottom: 2px solid #fff;
+  box-shadow: 5px 5px 5px 5px #ddd;
+}
+#favorite .favorite .boxes .products-card img {
+  width: 50%;
+  height: 50%;
+}
+#favorite .favorite .boxes .products-card .favIcon {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 20px;
+  color: red;
+  cursor: pointer;
+}
+#favorite .favorite .boxes .products-card .products-card-texts {
+  background-color: #f9f9ff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  height: 50%;
+}
+#favorite .favorite .boxes .products-card .products-card-texts h4 {
+  color: #222222;
+}
+#favorite .favorite .boxes .products-card .products-card-texts p {
+  color: #777777;
+}
+#favorite .favorite .boxes .products-card .products-card-texts .details {
+  width: 200px;
+}
+#favorite .favorite .boxes .products-card .products-card-texts .details:hover {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(127, 69, 252) 22%, rgb(253, 130, 29) 99%);
+}
+#favorite .favorite .boxes .products-card .products-card-texts .icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+#favorite .favorite .boxes .products-card .products-card-texts .icons i {
+  cursor: pointer;
+  font-size: 20px;
+}
+#favorite .favorite .boxes .products-card .products-card-texts .icons i:nth-child(1) {
+  color: green;
+}
+#favorite .favorite .boxes .products-card .products-card-texts .icons i:nth-child(2) {
+  color: red;
 }
 
 footer {

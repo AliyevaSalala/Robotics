@@ -13,11 +13,20 @@
       nav {
         ul {
           display: flex;
+          position: relative;
           gap: 20px;
           li {
+            transition: all 0.5s;
+            &:hover ul.dropdown {
+              display: block;
+              // color: #a92222;
+            }
             a {
               font-size: 15px;
               color: #fff;
+              .down {
+                font-size: 13px;
+              }
 
               &::after {
                 content: "";
@@ -30,6 +39,21 @@
               &:hover {
                 &::after {
                   width: 100%;
+                }
+              }
+            }
+            .dropdown {
+              width: 30%;
+              // margin-top: 10px;
+              position: absolute;
+              background-color: #fff;
+              padding: 10px;
+              line-height: 2;
+              display: none;
+              // z-index: 111;
+              li {
+                a {
+                  color: black;
                 }
               }
             }

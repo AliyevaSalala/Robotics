@@ -6,8 +6,10 @@ const search = document.querySelector("#search");
 const loadMoreBtn = document.querySelector(".load-more-btn");
 const sortBtn = document.querySelector(".sort-btn");
 const toTop = document.querySelector(".to-top");
+const counter = document.querySelector(".counter");
 
 const BASE_URL = "http://localhost:8080/products";
+const FAV_URL = "http://localhost:8080/favorite";
 
 let arr = [];
 let producstCopy = [];
@@ -46,12 +48,12 @@ function drawCards(data) {
     products.innerHTML += `
     <div class="products-card">
     <img src="${element.image}" alt="" />
-    <i class="fa-regular fa-heart favIcon"></i>
+    <i class="fa-regular fa-heart favIcon " onclick=addToFav(${element.id})></i>
     <div class="products-card-texts">
       <h4>${element.title}</h4>
       <p>${element.description}</p>
       <a href="details.html?id=${element.id}" class="details">View Details</a>
-    <div class="icons"> 
+    <div class="icons">
     <a href="form.html?id=${element.id}"> <i class="fa-solid fa-pen-to-square"></i></a>
     <i class="fa-solid fa-trash" onclick=deleteBtn(${element.id},this)></i>
     </div>
@@ -61,6 +63,45 @@ function drawCards(data) {
     `;
   });
 }
+
+// function drawCards(data) {
+//   products.innerHTML = "";
+//   data.forEach((element) => {
+//     const productsElement = document.createElement("div");
+//     productsElement.className = "products-card";
+//     const imageElement = document.createElement("img");
+//     imageElement.src = element.image;
+//     const favIcon = document.createElement("i");
+//     const divElement = document.createElement("div");
+//     divElement.className = "products-card-texts";
+//     const titleElement = document.createElement("h4");
+//     titleElement.innerText = element.title;
+//     const descEelement = document.createElement("p");
+//     descEelement.innerText = element.description;
+
+//     const aElement = document.createElement("a");
+//     aElement.innerText = "View Details";
+//     aElement.className = "details";
+//     aElement.href = "details.html?id=${element.id}";
+//     const divIcon = document.createElement("div");
+//     divIcon.className = "icons";
+//     const aElem = document.createElement("a");
+//     aElem.href = "form.html?id=${element.id}";
+//     const editEelem = document.createElement("i");
+
+//     editEelem.className = "fa-solid fa-pen-to-square";
+//     const deleteEelem = document.createElement("i");
+//     deleteEelem.className = "fa-solid fa-trash";
+//     deleteEelem.onclick = `deleteBtn(${element.id},this)`;
+
+//     aElem.append(editEelem);
+//     divIcon.append(aElem, deleteEelem);
+//     divElement.append(titleElement, descEelement, divIcon);
+//     productsElement.append(imageElement, favIcon, divElement);
+
+//     products.append(productsElement);
+//   });
+// }
 
 search.addEventListener("input", function (e) {
   let filtered = arr.filter((item) => {
@@ -101,3 +142,34 @@ async function deleteBtn(id, btn) {
     btn.closest("products-card").remove();
   }
 }
+
+async function addToFav(id) {
+  let fav = await axios(`${FAV_URL}`);
+  let favData = fav.data;
+  // console.log(favData);
+
+  let res = await axios(`${BASE_URL}/${id}`);
+  let data = res.data;
+  // console.log(data);
+
+  let product = favData.find((item) => {
+    return item.id == id;
+  });
+  if (!product) {
+    await axios.post(FAV_URL, data);
+  } else {
+    window.alert("fav eklenibdi!!");
+  }
+  // console.log(product);
+}
+
+async function favCounter() {
+  let res = await axios(FAV_URL);
+
+  // console.log(res.data);
+  let newData = res.data.length;
+
+  counter.innerHTML = newData.toString();
+}
+
+favCounter();
