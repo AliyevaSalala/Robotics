@@ -10,23 +10,30 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,100&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/sass/main.css" />
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
     ></script>
-    <script defer src="./assets/js/form.js"></script>
+    <!-- <script defer src="./assets/js/index.js"></script>
+     -->
+    <script defer src="">
+      AOS.init();
+    </script>
     <title>Robotics</title>
   </head>
   <body>
     <div class="bg-img">
-      <header style="background-color: rgb(224, 194, 199)">
+      <header>
         <div class="container">
           <div class="navbar">
             <div class="logo">
@@ -60,28 +67,136 @@
           </div>
         </div>
       </header>
+      <section id="services">
+        <div class="container">
+          <div class="services">
+            <div class="texts">
+              <h1>Services</h1>
+              <h6>Home <i class="fa-solid fa-arrow-right"></i> Services</h6>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
 
-    <!--========== form-section -->
-    <section id="form">
+    <section id="services-two">
       <div class="container">
-        <div class="form-section">
-          <form action="">
-            <div>
-              <input type="file" />
+        <div class="services-two">
+          <div class="services-texts">
+            <h1>Our Offered Services to you</h1>
+            <p>Who are in extremely love with eco friendly system.</p>
+          </div>
+          <div class="services-cards">
+            <div class="card">
+              <img src="./assets/images/os1.jpg" alt="" />
+              <h6><a href="#">Drone Architecture </a></h6>
+              <p>
+                inappropriate behavior is often laughed off as “boys will be
+                boys,” women face higher conduct women face higher conduct.
+              </p>
             </div>
-            <div>
-              <label for="name">Title:</label> <br />
-              <input type="text" placeholder="Name" id="name" />
+            <div class="card">
+              <img src="./assets/images/os2.jpg" alt="" />
+              <h6><a href="#">Drone Architecture </a></h6>
+              <p>
+                inappropriate behavior is often laughed off as “boys will be
+                boys,” women face higher conduct women face higher conduct.
+              </p>
             </div>
-            <div>
-              <label for="desc">Description:</label> <br />
-              <input type="text" placeholder="Description" id="desc" />
+            <div class="card">
+              <img src="./assets/images/os3.jpg" alt="" />
+              <h6><a href="#">Drone Architecture </a></h6>
+              <p>
+                inappropriate behavior is often laughed off as “boys will be
+                boys,” women face higher conduct women face higher conduct.
+              </p>
             </div>
-            <div>
-              <input type="submit" value="submit" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============Features -->
+    <section id="features">
+      <div class="container">
+        <div class="features-section">
+          <div class="texts">
+            <h1>Some Features that Made us Unique</h1>
+            <p>Who are in extremely love with eco friendly system.</p>
+          </div>
+          <div class="features-boxes">
+            <div class="features-box">
+              <a href="#"><i class="fa-solid fa-user"></i>Expert Technicians</a>
+              <p>
+                Usage of the Internet is becoming more common due to rapid
+                advancement of technology and power.
+              </p>
             </div>
-          </form>
+            <div class="features-box">
+              <a href="#"
+                ><i class="fa-solid fa-id-card"></i>Professional Service</a
+              >
+              <p>
+                Usage of the Internet is becoming more common due to rapid
+                advancement of technology and power.
+              </p>
+            </div>
+            <div class="features-box">
+              <a href="#"><i class="fa-solid fa-phone"></i>Great Support</a>
+              <p>
+                Usage of the Internet is becoming more common due to rapid
+                advancement of technology and power.
+              </p>
+            </div>
+            <div class="features-box">
+              <a href="#"><i class="fa-solid fa-rocket"></i>Technical Skills</a>
+              <p>
+                Usage of the Internet is becoming more common due to rapid
+                advancement of technology and power.
+              </p>
+            </div>
+            <div class="features-box">
+              <a href="#"><i class="fa-regular fa-gem"></i>Highly Recomended</a>
+              <p>
+                Usage of the Internet is becoming more common due to rapid
+                advancement of technology and power.
+              </p>
+            </div>
+            <div class="features-box">
+              <a href="#"
+                ><i class="fa-regular fa-comment"></i>Positive Reviews</a
+              >
+              <p>
+                Usage of the Internet is becoming more common due to rapid
+                advancement of technology and power.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="brand">
+      <div class="container">
+        <div class="brand">
+          <div class="brand-box">
+            <img src="./assets/images/l1.png" alt="" />
+          </div>
+
+          <div class="brand-box">
+            <img src="./assets/images/l2.png" alt="" />
+          </div>
+
+          <div class="brand-box">
+            <img src="./assets/images/l3.png" alt="" />
+          </div>
+
+          <div class="brand-box">
+            <img src="./assets/images/l4.png" alt="" />
+          </div>
+          <div class="brand-box">
+            <img src="./assets/images/l5.png" alt="" />
+          </div>
         </div>
       </div>
     </section>
@@ -165,5 +280,8 @@
         </div>
       </div>
     </footer>
+    <div class="to-top">
+      <a href="#"> <i class="fa-solid fa-arrow-up"></i></a>
+    </div>
   </body>
 </html>
