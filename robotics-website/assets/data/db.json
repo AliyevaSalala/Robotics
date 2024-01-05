@@ -7,9 +7,9 @@
       "description": "Who are in extremely lovedly system."
     },
     {
-      "image": "./assets/images/p2.png",
+      "image": "./assets/images/p4.png",
       "title": "shabnam",
-      "description": "aliyeva shalalalalalalala",
+      "description": "Incididunt culpa li",
       "id": 11
     },
     {
@@ -29,7 +29,20 @@
       "title": "Jarrod Marks",
       "description": "Asperiores ipsam tem",
       "id": 15
+    },
+    {
+      "image": "./assets/images/p2.png",
+      "title": "Uriel Horne",
+      "description": "Dolorem soluta repre",
+      "id": 16
     }
   ],
-  "favorite": []
+  "favorite": [
+    {
+      "image": "./assets/images/p4.png",
+      "title": "shabnam",
+      "description": "Incididunt culpa li",
+      "id": 11
+    }
+  ]
 }
