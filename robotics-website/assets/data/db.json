@@ -1,12 +1,6 @@
 {
   "products": [
     {
-      "id": 8,
-      "image": "./assets/images/p4.png",
-      "title": "nazrin ",
-      "description": "Who are in extremely lovedly system."
-    },
-    {
       "image": "./assets/images/p4.png",
       "title": "shabnam",
       "description": "Incididunt culpa li",
@@ -35,14 +29,20 @@
       "title": "Uriel Horne",
       "description": "Dolorem soluta repre",
       "id": 16
+    },
+    {
+      "image": "./assets/images/p3.png",
+      "title": "Gillian Mccullough",
+      "description": "Magna voluptate irur",
+      "id": 17
     }
   ],
   "favorite": [
     {
-      "image": "./assets/images/p4.png",
-      "title": "shabnam",
-      "description": "Incididunt culpa li",
-      "id": 11
+      "image": "./assets/images/p3.png",
+      "title": "Flavia Brooks",
+      "description": "Eiusmod impedit qui",
+      "id": 13
     }
   ]
 }

@@ -7,6 +7,9 @@ const loadMoreBtn = document.querySelector(".load-more-btn");
 const sortBtn = document.querySelector(".sort-btn");
 const toTop = document.querySelector(".to-top");
 const counter = document.querySelector(".counter");
+const iconCard = document.querySelector(".iconCard");
+const cardTable = document.querySelector(".cardTab");
+const closeBtn = document.querySelector(".close");
 
 const BASE_URL = "http://localhost:8080/products";
 const FAV_URL = "http://localhost:8080/favorite";
@@ -53,6 +56,7 @@ function drawCards(data) {
       <h4>${element.title}</h4>
       <p>${element.description}</p>
       <a href="details.html?id=${element.id}" class="details">View Details</a>
+      <a href="#" class="add-to-card" onclick=addToCard(${element.id})>Add To Card</a>
     <div class="icons">
     <a href="form.html?id=${element.id}"> <i class="fa-solid fa-pen-to-square"></i></a>
     <i class="fa-solid fa-trash" onclick=deleteBtn(${element.id},this)></i>
@@ -63,45 +67,6 @@ function drawCards(data) {
     `;
   });
 }
-
-// function drawCards(data) {
-//   products.innerHTML = "";
-//   data.forEach((element) => {
-//     const productsElement = document.createElement("div");
-//     productsElement.className = "products-card";
-//     const imageElement = document.createElement("img");
-//     imageElement.src = element.image;
-//     const favIcon = document.createElement("i");
-//     const divElement = document.createElement("div");
-//     divElement.className = "products-card-texts";
-//     const titleElement = document.createElement("h4");
-//     titleElement.innerText = element.title;
-//     const descEelement = document.createElement("p");
-//     descEelement.innerText = element.description;
-
-//     const aElement = document.createElement("a");
-//     aElement.innerText = "View Details";
-//     aElement.className = "details";
-//     aElement.href = "details.html?id=${element.id}";
-//     const divIcon = document.createElement("div");
-//     divIcon.className = "icons";
-//     const aElem = document.createElement("a");
-//     aElem.href = "form.html?id=${element.id}";
-//     const editEelem = document.createElement("i");
-
-//     editEelem.className = "fa-solid fa-pen-to-square";
-//     const deleteEelem = document.createElement("i");
-//     deleteEelem.className = "fa-solid fa-trash";
-//     deleteEelem.onclick = `deleteBtn(${element.id},this)`;
-
-//     aElem.append(editEelem);
-//     divIcon.append(aElem, deleteEelem);
-//     divElement.append(titleElement, descEelement, divIcon);
-//     productsElement.append(imageElement, favIcon, divElement);
-
-//     products.append(productsElement);
-//   });
-// }
 
 search.addEventListener("input", function (e) {
   let filtered = arr.filter((item) => {
@@ -173,3 +138,11 @@ async function favCounter() {
 }
 
 favCounter();
+
+iconCard.addEventListener("click", function () {
+  document.body.classList.toggle("showCard");
+});
+
+closeBtn.addEventListener("click", function () {
+  document.body.classList.toggle("showCard");
+});

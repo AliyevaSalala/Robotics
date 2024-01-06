@@ -100,6 +100,12 @@
               );
             }
           }
+          .add-to-card {
+            padding: 5px 20px;
+            background-color: rgb(234, 193, 116);
+            border-radius: 20px;
+            color: #222222;
+          }
 
           .icons {
             display: flex;
@@ -162,6 +168,75 @@
         input {
           width: 150px;
         }
+      }
+    }
+  }
+}
+
+.cardTab {
+  width: 400px;
+  background-color: #222222;
+  color: #fff;
+  position: fixed;
+  top: 80px;
+  right: -450px;
+  bottom: 0;
+  z-index: 111;
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
+
+  h1 {
+    text-align: center;
+    padding: 20px 0;
+    // margin-bottom: 30px;
+    font-size: 26px;
+    font-style: italic;
+  }
+  .listCard {
+    margin-top: 30px;
+    overflow: auto;
+    .item {
+      display: grid;
+      grid-template-columns: 130px 70px 50px 1fr;
+      gap: 10px;
+      text-align: center;
+      align-items: center;
+      &:nth-child(odd) {
+        background-color: #eee1;
+      }
+      img {
+        width: 50px;
+      }
+      .quantify {
+        span {
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          background-color: #fff;
+          color: #000;
+          border-radius: 50%;
+          cursor: pointer;
+
+          &:nth-child(2) {
+            background-color: transparent;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    button {
+      padding: 10px 0;
+      background-color: orange;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      &:nth-child(1) {
+        background-color: #fff;
+        color: orange;
       }
     }
   }

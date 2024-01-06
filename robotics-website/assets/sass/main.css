@@ -21,6 +21,10 @@ html {
   }
 }
 
+body.showCard .cardTab {
+  right: 0;
+}
+
 #favorite .favorite .boxes .products-card .products-card-texts .details, #home-about-video .about-video .about-video-left button, #home-about .home-about .home-aout-left .texts button, #products-section .products-section .load-more-btn, #products-section .products-section .products .products-card .products-card-texts .details, #banner .hero-banner-section .hero-banner-section-left a {
   width: 150px;
   padding: 10px 20px;
@@ -69,6 +73,10 @@ html {
 .bg-img header .navbar nav ul li a {
   font-size: 15px;
   color: #fff;
+}
+.bg-img header .navbar nav ul li a .basket {
+  font-size: 14px;
+  color: rgb(220, 80, 80);
 }
 .bg-img header .navbar nav ul li a .down {
   font-size: 13px;
@@ -284,6 +292,12 @@ html {
   background: rgb(131, 58, 180);
   background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(127, 69, 252) 22%, rgb(253, 130, 29) 99%);
 }
+#products-section .products-section .products .products-card .products-card-texts .add-to-card {
+  padding: 5px 20px;
+  background-color: rgb(234, 193, 116);
+  border-radius: 20px;
+  color: #222222;
+}
 #products-section .products-section .products .products-card .products-card-texts .icons {
   display: flex;
   justify-content: center;
@@ -330,6 +344,70 @@ html {
   #products-section .products-section .search-sort input {
     width: 150px;
   }
+}
+
+.cardTab {
+  width: 400px;
+  background-color: #222222;
+  color: #fff;
+  position: fixed;
+  top: 80px;
+  right: -450px;
+  bottom: 0;
+  z-index: 111;
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
+}
+.cardTab h1 {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 26px;
+  font-style: italic;
+}
+.cardTab .listCard {
+  margin-top: 30px;
+  overflow: auto;
+}
+.cardTab .listCard .item {
+  display: grid;
+  grid-template-columns: 130px 70px 50px 1fr;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+.cardTab .listCard .item:nth-child(odd) {
+  background-color: rgba(238, 238, 238, 0.0666666667);
+}
+.cardTab .listCard .item img {
+  width: 50px;
+}
+.cardTab .listCard .item .quantify span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.cardTab .listCard .item .quantify span:nth-child(2) {
+  background-color: transparent;
+  color: #fff;
+}
+.cardTab .btn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.cardTab .btn button {
+  padding: 10px 0;
+  background-color: orange;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.cardTab .btn button:nth-child(1) {
+  background-color: #fff;
+  color: orange;
 }
 
 #home-about {
@@ -1011,6 +1089,61 @@ html {
 }
 #home .home-section .home-right .search-widget .list ul li a:hover {
   color: rgb(94, 94, 173);
+}
+
+#contact {
+  padding: 2rem 0;
+  margin-top: 30px;
+}
+#contact .contact .message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contact .contact .message h3 {
+  text-align: center;
+  font-size: 25px;
+  color: #000;
+  padding: 30px 0;
+}
+#contact .contact .message .search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+#contact .contact .message .search .input {
+  display: flex;
+  gap: 20px;
+}
+#contact .contact .message .search .input input {
+  padding: 5px 15px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid rgb(217, 213, 213);
+  box-shadow: 8px 8px 8px rgba(119, 119, 119, 0.4666666667);
+  outline: none;
+}
+#contact .contact .message .search textarea {
+  box-shadow: 8px 8px 8px rgba(119, 119, 119, 0.4666666667);
+  outline: none;
+  border: 1px solid rgb(217, 213, 213);
+  width: 100%;
+}
+#contact .contact .message .search button {
+  width: 200px;
+  padding: 8px 20px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  transition: all 0.6s;
+}
+#contact .contact .message .search button:hover {
+  background-color: transparent;
+  border: 1px solid #000;
+  color: #000;
 }
 
 footer {
