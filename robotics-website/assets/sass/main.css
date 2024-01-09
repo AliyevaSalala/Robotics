@@ -23,6 +23,7 @@ html {
 
 body.showCard .cardTab {
   right: 0;
+  transition: all 0.8s;
 }
 
 #favorite .favorite .boxes .products-card .products-card-texts .details, #home-about-video .about-video .about-video-left button, #home-about .home-about .home-aout-left .texts button, #products-section .products-section .load-more-btn, #products-section .products-section .products .products-card .products-card-texts .details, #banner .hero-banner-section .hero-banner-section-left a {
@@ -263,7 +264,7 @@ body.showCard .cardTab {
   width: 50%;
   height: 50%;
 }
-#products-section .products-section .products .products-card .favIcon {
+#products-section .products-section .products .products-card .fa-heart {
   position: absolute;
   right: 10px;
   top: 5px;
@@ -357,6 +358,7 @@ body.showCard .cardTab {
   z-index: 111;
   display: grid;
   grid-template-rows: 50px 1fr 50px;
+  transition: all 0.7s;
 }
 .cardTab h1 {
   text-align: center;

@@ -65,7 +65,7 @@
           width: 50%;
           height: 50%;
         }
-        .favIcon {
+        .fa-heart {
           position: absolute;
           right: 10px;
           top: 5px;
@@ -184,6 +184,7 @@
   z-index: 111;
   display: grid;
   grid-template-rows: 50px 1fr 50px;
+  transition: all 0.7s;
 
   h1 {
     text-align: center;

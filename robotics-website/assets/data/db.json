@@ -7,42 +7,24 @@
       "id": 11
     },
     {
-      "image": "./assets/images/p3.png",
-      "title": "Flavia Brooks",
-      "description": "Eiusmod impedit qui",
-      "id": 13
-    },
-    {
       "image": "./assets/images/p1.png",
       "title": "Shoshana Sullivan",
       "description": "Consequuntur veritat",
       "id": 14
     },
     {
-      "image": "./assets/images/p4.png",
-      "title": "Jarrod Marks",
-      "description": "Asperiores ipsam tem",
-      "id": 15
-    },
-    {
       "image": "./assets/images/p2.png",
-      "title": "Uriel Horne",
-      "description": "Dolorem soluta repre",
-      "id": 16
-    },
-    {
-      "image": "./assets/images/p3.png",
-      "title": "Gillian Mccullough",
-      "description": "Magna voluptate irur",
+      "title": "Dora Silva",
+      "description": "Ut possimus ullam o",
       "id": 17
     }
   ],
   "favorite": [
     {
-      "image": "./assets/images/p3.png",
-      "title": "Flavia Brooks",
-      "description": "Eiusmod impedit qui",
-      "id": 13
+      "image": "./assets/images/p4.png",
+      "title": "shabnam",
+      "description": "Incididunt culpa li",
+      "id": 11
     }
   ]
 }

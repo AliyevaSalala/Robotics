@@ -51,15 +51,15 @@ function drawCards(data) {
     products.innerHTML += `
     <div class="products-card">
     <img src="${element.image}" alt="" />
-    <i class="fa-regular fa-heart favIcon " onclick=addToFav(${element.id})></i>
+    <i class="fa-regular fa-heart  " onclick="addToFav(${element.id},this)"></i>
     <div class="products-card-texts">
       <h4>${element.title}</h4>
       <p>${element.description}</p>
       <a href="details.html?id=${element.id}" class="details">View Details</a>
-      <a href="#" class="add-to-card" onclick=addToCard(${element.id})>Add To Card</a>
+      <button class="add-to-card" onclick="addToCard(${element.id})">Add To Card</button>
     <div class="icons">
     <a href="form.html?id=${element.id}"> <i class="fa-solid fa-pen-to-square"></i></a>
-    <i class="fa-solid fa-trash" onclick=deleteBtn(${element.id},this)></i>
+    <i class="fa-solid fa-trash" onclick="deleteBtn(${element.id},this)"></i>
     </div>
     </div>
   </div>
@@ -108,7 +108,29 @@ async function deleteBtn(id, btn) {
   }
 }
 
-async function addToFav(id) {
+// ================================FAVORITE
+// let favorite = [];
+
+// function addToFav(id, btn) {
+//   btn.className === "fa-regular fa-heart"
+//     ? (btn.className = "fa-solid fa-heart")
+//     : (btn.className = "fa-regular fa-heart");
+
+//   let product = arr.find((item) => item.id === id);
+
+//   // console.log(product);
+
+//   let index = favorite?.findIndex((item) => item.id === id);
+//   console.log(index);
+
+//   let favorites = favoriteProducts;
+// }
+
+async function addToFav(id, btn) {
+  btn.className === "fa-regular fa-heart"
+    ? (btn.className = "fa-solid fa-heart")
+    : (btn.className = "fa-regular fa-heart");
+
   let fav = await axios(`${FAV_URL}`);
   let favData = fav.data;
   // console.log(favData);
@@ -139,6 +161,10 @@ async function favCounter() {
 
 favCounter();
 
+//======================================= BASKET
+
+let basket = getProductsToLocalSotarge() || [];
+
 iconCard.addEventListener("click", function () {
   document.body.classList.toggle("showCard");
 });
@@ -146,3 +172,31 @@ iconCard.addEventListener("click", function () {
 closeBtn.addEventListener("click", function () {
   document.body.classList.toggle("showCard");
 });
+
+function addToCard(id) {
+  let product = arr.find((item) => {
+    return item.id === id;
+  });
+
+  console.log(product);
+
+  let index = basket?.findIndex((item) => {
+    return item.product.id === id;
+  });
+  console.log(index);
+
+  // if (index > -1) {
+  //   basket[index].count = basket[index].count + 1;
+  // } else {
+  //   basket.push({ count: 1, product: product });
+  // }
+
+  setProductsToLocalSotarge(basket);
+}
+
+function setProductsToLocalSotarge(arr) {
+  localStorage.setItem("allProducts", JSON.stringify(arr));
+}
+function getProductsToLocalSotarge() {
+  return JSON.parse(localStorage.getItem("allProducts"));
+}
