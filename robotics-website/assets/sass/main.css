@@ -65,9 +65,6 @@ body.showCard .cardTab {
   position: relative;
   gap: 20px;
 }
-.bg-img header .navbar nav ul li {
-  transition: all 0.5s;
-}
 .bg-img header .navbar nav ul li:hover ul.dropdown {
   display: block;
 }
@@ -93,7 +90,10 @@ body.showCard .cardTab {
 .bg-img header .navbar nav ul li a:hover::after {
   width: 100%;
 }
-.bg-img header .navbar nav ul li .dropdown {
+.bg-img header .navbar nav ul li .drop-down {
+  padding: 30px 0;
+}
+.bg-img header .navbar nav ul li .drop-down .dropdown {
   width: 30%;
   position: absolute;
   background-color: #fff;
@@ -101,7 +101,7 @@ body.showCard .cardTab {
   line-height: 2;
   display: none;
 }
-.bg-img header .navbar nav ul li .dropdown li a {
+.bg-img header .navbar nav ul li .drop-down .dropdown li a {
   color: black;
 }
 .bg-img header .navbar .fa-solid {

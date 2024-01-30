@@ -16,9 +16,10 @@
           position: relative;
           gap: 20px;
           li {
-            transition: all 0.5s;
+            // transition: all 0.5s;
             &:hover ul.dropdown {
               display: block;
+              // visibility: visible;
               // color: #a92222;
             }
             a {
@@ -46,18 +47,21 @@
                 }
               }
             }
-            .dropdown {
-              width: 30%;
-              // margin-top: 10px;
-              position: absolute;
-              background-color: #fff;
-              padding: 10px;
-              line-height: 2;
-              display: none;
-              // z-index: 111;
-              li {
-                a {
-                  color: black;
+            .drop-down {
+              padding: 30px 0;
+              .dropdown {
+                width: 30%;
+                position: absolute;
+                background-color: #fff;
+                padding: 10px;
+                line-height: 2;
+                // visibility: hidden;
+                display: none;
+                // z-index: 111;
+                li {
+                  a {
+                    color: black;
+                  }
                 }
               }
             }
